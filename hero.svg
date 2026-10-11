@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" role="img" aria-label="Illustration of a Cainta, Rizal business district at sunrise">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b1f38"/>
+      <stop offset="45%" stop-color="#16395f"/>
+      <stop offset="100%" stop-color="#3d6a9e"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffe9a8"/>
+      <stop offset="100%" stop-color="#c9a227"/>
+    </linearGradient>
+    <linearGradient id="far" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1d4b7a"/>
+      <stop offset="100%" stop-color="#15395d"/>
+    </linearGradient>
+    <linearGradient id="near" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f2a4a"/>
+      <stop offset="100%" stop-color="#0b1f38"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#143a24"/>
+      <stop offset="100%" stop-color="#0c2418"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="640" fill="url(#sky)"/>
+
+  <!-- stars -->
+  <g fill="#ffffff" opacity=".5">
+    <circle cx="90" cy="60" r="1.6"/><circle cx="210" cy="110" r="1.2"/>
+    <circle cx="330" cy="55" r="1.5"/><circle cx="470" cy="95" r="1.1"/>
+    <circle cx="610" cy="48" r="1.7"/><circle cx="760" cy="105" r="1.2"/>
+    <circle cx="900" cy="62" r="1.4"/><circle cx="1040" cy="118" r="1.1"/>
+    <circle cx="1140" cy="70" r="1.6"/><circle cx="150" cy="170" r="1.1"/>
+    <circle cx="860" cy="165" r="1.2"/><circle cx="1010" cy="200" r="1"/>
+  </g>
+
+  <!-- sun -->
+  <circle cx="935" cy="215" r="86" fill="url(#sun)" opacity=".92"/>
+  <circle cx="935" cy="215" r="120" fill="url(#sun)" opacity=".14"/>
+  <circle cx="935" cy="215" r="165" fill="url(#sun)" opacity=".07"/>
+
+  <!-- Sierra Madre foothills -->
+  <path d="M0 330 L150 250 L280 322 L420 236 L560 330 L700 262 L840 340 L980 268 L1120 336 L1200 300 L1200 640 L0 640 Z"
+        fill="url(#far)" opacity=".55"/>
+
+  <!-- distant town -->
+  <g fill="#1b4468" opacity=".85">
+    <rect x="40"  y="336" width="52" height="86"/>
+    <rect x="104" y="312" width="38" height="110"/>
+    <rect x="152" y="350" width="60" height="72"/>
+    <rect x="232" y="326" width="44" height="96"/>
+    <rect x="690" y="330" width="56" height="92"/>
+    <rect x="760" y="308" width="40" height="114"/>
+    <rect x="812" y="348" width="62" height="74"/>
+    <rect x="1090" y="322" width="48" height="100"/>
+  </g>
+
+  <!-- mid buildings -->
+  <g fill="#14375c">
+    <rect x="300" y="300" width="76" height="140" rx="3"/>
+    <rect x="386" y="344" width="60" height="96" rx="3"/>
+    <rect x="880" y="336" width="72" height="104" rx="3"/>
+    <rect x="962" y="306" width="54" height="134" rx="3"/>
+  </g>
+  <g fill="#f3d99a" opacity=".75">
+    <rect x="316" y="318" width="12" height="10"/><rect x="340" y="318" width="12" height="10"/>
+    <rect x="316" y="342" width="12" height="10"/><rect x="340" y="342" width="12" height="10"/>
+    <rect x="896" y="354" width="12" height="10"/><rect x="920" y="354" width="12" height="10"/>
+    <rect x="974" y="324" width="12" height="10"/><rect x="996" y="324" width="12" height="10"/>
+    <rect x="396" y="362" width="12" height="10"/><rect x="420" y="362" width="12" height="10"/>
+  </g>
+
+  <!-- street level buildings -->
+  <g>
+    <rect x="90"  y="424" width="150" height="176" fill="#0f2a4a"/>
+    <path d="M78 424 L165 358 L252 424 Z" fill="#c9a227" opacity=".9"/>
+    <rect x="90"  y="424" width="150" height="176" fill="url(#near)"/>
+    <rect x="140" y="500" width="52" height="100" rx="3" fill="#f3d99a" opacity=".9"/>
+    <text x="166" y="470" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" fill="#e0bc4a">CBR</text>
+
+    <rect x="470" y="410" width="190" height="190" fill="url(#near)"/>
+    <rect x="470" y="410" width="190" height="14" fill="#c9a227"/>
+    <rect x="496" y="444" width="40" height="34" fill="#f3d99a" opacity=".85"/>
+    <rect x="548" y="444" width="40" height="34" fill="#f3d99a" opacity=".85"/>
+    <rect x="600" y="444" width="40" height="34" fill="#f3d99a" opacity=".5"/>
+    <rect x="540" y="500" width="50" height="100" rx="3" fill="#f3d99a" opacity=".9"/>
+
+    <rect x="900" y="420" width="170" height="180" fill="url(#near)"/>
+    <path d="M890 420 L985 356 L1080 420 Z" fill="#1d4b7a"/>
+    <rect x="928" y="452" width="40" height="32" fill="#f3d99a" opacity=".8"/>
+    <rect x="1002" y="452" width="40" height="32" fill="#f3d99a" opacity=".6"/>
+    <rect x="958" y="502" width="54" height="98" rx="3" fill="#f3d99a" opacity=".9"/>
+  </g>
+
+  <!-- road -->
+  <rect x="0" y="592" width="1200" height="48" fill="#0b1f38"/>
+  <rect x="0" y="588" width="1200" height="6" fill="#c9a227" opacity=".5"/>
+
+  <!-- trees -->
+  <g fill="#12351f">
+    <path d="M300 600 q4-70 26-92 q22 22 26 92 z"/>
+    <rect x="318" y="586" width="16" height="18"/>
+    <path d="M700 604 q4-62 22-82 q18 20 22 82 z"/>
+    <rect x="716" y="592" width="12" height="16"/>
+    <path d="M1130 604 q4-66 24-86 q20 20 24 86 z"/>
+  </g>
+  <g fill="#0f2a4a">
+    <path d="M640 602 q3-50 18-66 q15 16 18 66 z"/>
+    <rect x="653" y="594" width="10" height="12"/>
+  </g>
+</svg>

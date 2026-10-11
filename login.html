@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login — Cainta Business Registry</title>
+  <meta name="description" content="Sign in to your Cainta Business Registry account to manage your business registration.">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+
+  <div class="auth-wrap">
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <a class="brand" href="index.html">
+          <img src="assets/logo.svg" alt="Cainta Business Registry logo">
+          <span>CBR<small>Cainta, Rizal</small></span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+          <span class="bars"></span>
+        </button>
+
+        <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="index.html#services">Services</a>
+          <a href="index.html#directory">Directory</a>
+          <a class="btn btn-gold" href="register.html">Register</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="auth-main">
+      <div class="container auth-card">
+
+        <div class="auth-head">
+          <img src="assets/logo.svg" alt="">
+          <h1>Login to your account</h1>
+          <p>Access your business registration and keep your listing up to date.</p>
+        </div>
+
+        <div class="card card-pad-lg">
+          <form id="login-form" novalidate>
+            <div class="form-alert"></div>
+
+            <div class="demo-hint">
+              <b>Demo administrator account</b><br>
+              Email <code>admin@cainta.gov.ph</code> &nbsp; Password <code>Admin@123</code>
+            </div>
+
+            <div class="field">
+              <label for="email">Email Address <span class="req" aria-hidden="true">*</span></label>
+              <input class="input" type="email" id="email" name="email"
+                     placeholder="you@email.com" autocomplete="email" required>
+              <p class="field-error" id="email-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="password">Password <span class="req" aria-hidden="true">*</span></label>
+              <div class="pw-row">
+                <input class="input" type="password" id="password" name="password"
+                       placeholder="Enter your password" autocomplete="current-password" required>
+                <button class="pw-toggle" type="button" data-toggle-password="password">Show</button>
+              </div>
+              <p class="field-error" id="password-error"></p>
+            </div>
+
+            <button class="btn btn-primary btn-block" type="submit" data-label="Login">Login</button>
+
+            <p class="small muted mt-2 mb-0">
+              Passwords are never stored as plain text — they are salted and hashed before saving.
+            </p>
+          </form>
+        </div>
+
+        <p class="auth-foot">
+          Don’t have an account yet? <a href="register.html">Register your business</a><br>
+          <a href="index.html">&larr; Back to the public landing page</a>
+        </p>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-bottom" style="margin-top:0;border-top:0">
+        <span>&copy; <span id="year"></span> Cainta Business Registry.</span>
+        <span>Municipality of Cainta, Province of Rizal</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/db.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth-page.js"></script>
+</body>
+</html>

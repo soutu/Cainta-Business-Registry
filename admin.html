@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Console — Cainta Business Registry</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="Cainta Business Registry logo">
+        <span>CBR<small>Admin Console</small></span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="bars"></span>
+      </button>
+
+      <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+        <a href="index.html">Public Site</a>
+        <a href="admin.html" class="active">Admin Console</a>
+        <button class="btn btn-outline" id="logout-btn" type="button" style="border-color:rgba(255,255,255,.35);color:#fff">Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="container page-head-inner">
+        <div>
+          <span class="eyebrow">Administrator</span>
+          <h1>Admin Console</h1>
+          <p>Review, approve, edit and delete every business registration in the registry.</p>
+        </div>
+        <div style="display:flex;gap:.6rem;align-items:center;flex-wrap:wrap">
+          <span class="user-chip" id="user-chip"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <div class="tabs" role="tablist">
+          <button type="button" class="active" data-tab="overview" role="tab" aria-selected="true">Overview</button>
+          <button type="button" data-tab="businesses" role="tab" aria-selected="false">Business Registrations</button>
+          <button type="button" data-tab="users" role="tab" aria-selected="false">Users &amp; Roles</button>
+        </div>
+
+        <!-- OVERVIEW -->
+        <div id="tab-body" role="tabpanel"></div>
+
+        <!-- BUSINESSES (toolbar + table are rendered by admin.js) -->
+        <div id="tab-businesses" class="hidden">
+          <div class="table-wrap">
+            <div class="table-toolbar">
+              <div style="flex:1 1 200px">
+                <input class="input" id="biz-search" type="search" placeholder="Search records…" autocomplete="off">
+              </div>
+              <select class="select" id="status-filter" aria-label="Filter by status" style="flex:0 1 150px">
+                <option value="">All statuses</option>
+                <option value="pending">Pending</option>
+                <option value="approved">Approved</option>
+                <option value="rejected">Rejected</option>
+              </select>
+              <select class="select" id="category-filter" aria-label="Filter by category" style="flex:0 1 190px">
+                <option value="">All categories</option>
+              </select>
+              <button class="btn btn-gold" id="btn-add-biz" type="button">+ Add Listing</button>
+            </div>
+
+            <p class="small muted" id="result-count" style="padding:.75rem 1.15rem;margin:0;border-bottom:1px solid var(--line-soft)"></p>
+
+            <div id="biz-table-wrap"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-bottom" style="margin-top:0;border-top:0">
+      <span>&copy; <span id="year"></span> Cainta Business Registry.</span>
+      <span>Municipality of Cainta, Province of Rizal</span>
+    </div>
+  </footer>
+
+  <script src="js/db.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/business-form.js"></script>
+  <script src="js/admin.js"></script>
+  <script>
+    // keep the year stamp fresh on the app pages
+    document.addEventListener("DOMContentLoaded", function () {
+      var y = document.getElementById("year");
+      if (y) y.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
